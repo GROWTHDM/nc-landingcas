@@ -105,7 +105,7 @@ function move() {
     }, 10000)
 
     setTimeout( () => {
-        window.open("https://go.aff.7k-partners.com/5x3pe0op?utm_campaign=mini-curso", "_self");
+        window.open("https://ganhandocomapp.com/nc-botcaspx", "_self");
     }, 10500)
 
     function frame() {
