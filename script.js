@@ -25,7 +25,6 @@ btn.addEventListener('click', () => {
         btn2.disabled = false;
     }, )
 
-    countdownTimer = setInterval(startCountdown, 1000);
 });
 
 btn2.addEventListener('click', () => {
@@ -44,7 +43,7 @@ span.onclick = function() {
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
-    if (event.target == modal) {
+    if (event.target === modal) {
         modal.style.display = "none";
     }
 }
@@ -65,6 +64,15 @@ btn.onclick = function() {
     modal.style.display = "block";
 }
 
+// When the user clicks on <span> (x), close the modal
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
 
 function move() {
 
@@ -80,19 +88,19 @@ function move() {
     elem.style.animation = 'none';
 
     setTimeout( () => {
-        hacker.textContent = "VERIFICANDO DEPÓSITO";
+        hacker.innerHTML = "VERIFICANDO DEPÓSITO";
     }, 3000)
 
     setTimeout( () => {
-        hacker.textContent = 'DEPÓSITO VERIFICADO'
+        hacker.innerHTML = 'DEPÓSITO VERIFICADO'
     }, 5000)
 
     setTimeout( () => {
-        hacker.textContent = 'GERADOR ATIVADO'
+        hacker.innerHTML = 'GERADOR ATIVADO'
     }, 7000)
 
     setTimeout( () => {
-        hacker.textContent = "GERADOR LIBERADO!"
+        hacker.innerHTML = "GERADOR LIBERADO!"
     }, 10000)
 
     setTimeout( () => {
@@ -115,37 +123,3 @@ function move() {
 
 }
 
-const accountCreated = "account_created: true";
-const accountnotCreated = "account_created: false";
-
-window.localStorage.setItem('true', accountCreated);
-window.localStorage.setItem('false', accountnotCreated);
-function enableIfTrue() {
-        if (accountCreated === true){
-            window.localStorage.getItem('true');
-            btn2.disabled = false;
-        } else{
-            window.localStorage.getItem('false');
-        }
-}
-
-enableIfTrue();
-
-// let countdown = 60;
-// let countdownTimer = null;
-//
-// function startCountdown(){
-//     countdown--;
-//     btn2.innerHTML = countdown + 's';
-//     btn2.disabled = true;
-//     if(countdown < 0){
-//         finishCountdown()
-//         btn2.disabled = false;
-//     }
-// }
-//
-// function finishCountdown(){
-//     clearInterval(countdownTimer)
-//     btn2.innerHTML = "AVANÇAR"
-//     countdown = 60;
-// }
