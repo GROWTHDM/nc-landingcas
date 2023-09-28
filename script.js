@@ -18,7 +18,7 @@ btn.addEventListener('click', () => {
     setTimeout((e) => {
         container2.classList.add('active');
         container2.style.left = '50%';
-        container2.style.opacity = '1'
+        container2.style.opacity = '1';
         e.preventDefault();
     }, 1000);
     setTimeout( () => {
